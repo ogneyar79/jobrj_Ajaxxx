@@ -15,12 +15,14 @@
             type: 'GET',
             url: 'http://localhost:8080/job4j_Ajax/greet',
             data: 'name=' + $('#exampleInputEmail1').val(),
-            dataType: 'html'
+            dataType: 'json'
         }).done(function (data) {
-            console.log(data)
+         //   let jsData = JSON.parse(data)
+        //    console.log(jsData)
+
             var newElems = $("<div/>")
                 .append(data)
-            $(' #d').prepend(newElems);
+             $(' #d').prepend(newElems);
         }).fail(function (err) {
             alert(err);
         });
